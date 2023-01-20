@@ -1,5 +1,5 @@
 const { ethers, upgrades } = require("hardhat")
-const proxyAddress = "0x7cCc799d6E5122262f50d6691dfF7dfe9701D3Dd"
+const proxyAddress = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
 async function main() {
     const BoxV2 = await ethers.getContractFactory("BoxV2")
     let box = await upgrades.upgradeProxy(proxyAddress, BoxV2)
